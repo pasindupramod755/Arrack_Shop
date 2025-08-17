@@ -8,7 +8,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #85582C 0%, #996515 50%, #ba7b0b, #ca8606, #da9101);
+    background: linear-gradient(135deg, #763e06 0%, #996515 50%, #ba7b0b, #ca8606, #da9101);
 
 }
 
@@ -23,12 +23,12 @@ body {
 
 .card {
     transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(135deg, #9d6b38, #da9f45 50%, #b67505, #ca8606, #875b03);
 }
 
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, #e1760b, #da9f45 50%, #b67505, #ca8606, #875b03);
     color: aliceblue;
 }
 
