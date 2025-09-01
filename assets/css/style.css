@@ -1,0 +1,38 @@
+.navbar-gradient {
+    background: linear-gradient(135deg, #85582C 0%, #996515 50%, #ba7b0b, #ca8606, #da9101);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+body {
+    background: linear-gradient(135deg, #763e06 0%, #996515 50%, #ba7b0b, #ca8606, #da9101);
+
+}
+
+.hero-1 {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://images.unsplash.com/photo-1716719215097-a6a640fc3225?q=80&w=1201&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(135deg, #9d6b38, #da9f45 50%, #b67505, #ca8606, #875b03);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    color: aliceblue;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
