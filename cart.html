@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-gradient fixed-top">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">
+                <i class="fas fa-gem"></i>
+                Arrack කඩේ
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav2">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#product">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-2" href="cart.html">Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="h-100 h-custom p-5" style="background-color: #d2c9ff;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12">
+                    <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                        <div class="card-body p-0">
+                            <div class="row g-0">
+                                <div class="col-lg-8">
+                                    <div class="p-5">
+                                        <div class="d-flex justify-content-between align-items-center mb-5">
+                                            <h1 class="fw-bold mb-0">Shopping Cart</h1>
+                                            <h6 class="mb-0 text-muted" id="itemQty"></h6>
+                                        </div>
+                                        <div id="cartLoad"></div>
+
+                                        <hr class="my-4">
+
+                                        <div class="pt-5">
+                                            <h6 class="mb-0"><a href="#!" class="text-body"><i
+                                                        class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 bg-body-tertiary">
+                                    <div class="p-5">
+                                        <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                                        <hr class="my-4">
+
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <h5 class="text-uppercase">items 3</h5>
+                                            <h5>€ 132.00</h5>
+                                        </div>
+
+                                        <h5 class="text-uppercase mb-3">Shipping</h5>
+
+                                        <div class="mb-4 pb-2">
+                                            <select data-mdb-select-init>
+                                                <option value="1">Standard-Delivery- €5.00</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                                <option value="4">Four</option>
+                                            </select>
+                                        </div>
+
+                                        <h5 class="text-uppercase mb-3">Give code</h5>
+
+                                        <div class="mb-5">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <input type="text" id="form3Examplea2"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="form3Examplea2">Enter your code</label>
+                                            </div>
+                                        </div>
+
+                                        <hr class="my-4">
+
+                                        <div class="d-flex justify-content-between mb-5">
+                                            <h5 class="text-uppercase">Total price</h5>
+                                            <h5>€ 137.00</h5>
+                                        </div>
+
+                                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                            class="btn btn-dark btn-block btn-lg"
+                                            data-mdb-ripple-color="dark">Register</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/cart.js"></script>
+</body>
+
+</html>
