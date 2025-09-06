@@ -46,7 +46,7 @@ for (let i = 0; i < cartArray.length; i++) {
 
 }
 
-let discountPrice = itemPrice * 0.2;
+let discountPrice = itemPrice * 0.1;
 let totalPrice = itemPrice - discountPrice;
 
 document.getElementById("itemQty").innerText = item + "  items"
