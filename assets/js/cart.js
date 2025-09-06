@@ -6,8 +6,6 @@ console.log(cartArray[0]);
 let itemPrice = 0;
 let item = 0;
 
-
-
 for (let i = 0; i < cartArray.length; i++) {
     document.getElementById("cartLoad").innerHTML += `
                                         <hr class="my-4">
@@ -48,9 +46,8 @@ for (let i = 0; i < cartArray.length; i++) {
 
 }
 
-let discountPrice = itemPrice * 0.1;
+let discountPrice = itemPrice * 0.2;
 let totalPrice = itemPrice - discountPrice;
-
 
 document.getElementById("itemQty").innerText = item + "  items"
 document.getElementById("summryQty").innerText = item + "  items"
