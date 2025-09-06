@@ -54,3 +54,5 @@ document.getElementById("summryQty").innerText = item + "  items"
 document.getElementById("itemPrice").innerText = "Rs." + itemPrice + ".00"
 document.getElementById("discountPrice").innerText = "Rs." + discountPrice + ".00"
 document.getElementById("totalPrice").innerText = "Rs." + totalPrice + ".00"
+
+
