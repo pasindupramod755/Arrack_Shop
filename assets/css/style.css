@@ -22,13 +22,27 @@
     background: linear-gradient(135deg, #9d6b38, #da9f45 50%, #b67505, #ca8606, #875b03);
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-    color: aliceblue;
-}
+
 
 .card-img-top {
     height: 200px;
     object-fit: cover;
+}
+
+
+@media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+top: 13px;
 }
