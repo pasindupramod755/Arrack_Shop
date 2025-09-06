@@ -1,45 +1,66 @@
-let cartArray = JSON.parse(localStorage.getItem("arrakCart"))
+let cartArray = JSON.parse(localStorage.getItem("arrakCart")) || [];
+let itemPrice = 0;
+let item = 0;
 
-console.log(cartArray[0]);
-document.getElementById("itemQty").innerText = cartArray.length + "  items"
+function loadcart() {
+    itemPrice = 0;
+    item = 0;
 
+    const cartLoad = document.getElementById("cartLoad");
+    cartLoad.innerHTML = ""; // Clear existing cart
 
+    for (let i = 0; i < cartArray.length; i++) {
+        cartLoad.innerHTML += `
+            <hr class="my-4">
+            <div class="row mb-4 d-flex justify-content-between align-items-center">
+                <!-- Product Image -->
+                <div class="col-md-2 col-lg-2 col-xl-2">
+                    <img src="${cartArray[i].img}" class="img-fluid rounded-3" alt="${cartArray[i].title}">
+                </div>
 
-for (let i = 0; i < cartArray.length; i++) {
-    document.getElementById("cartLoad").innerHTML += `
-                                        <hr class="my-4">
-                                        <div class="row mb-4 d-flex justify-content-between align-items-center">
-                                            <div class="col-md-2 col-lg-2 col-xl-2">
-                                                <img src="${cartArray[i].img}"
-                                                    class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                            </div>
-                                            <div class="col-md-3 col-lg-3 col-xl-3">
-                                                <h6 class="mb-0">${cartArray[i].title}</h6>
-                                            </div>
-                                            <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                <button data-mdb-button-init data-mdb-ripple-init
-                                                    class="btn btn-link px-2"
-                                                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                                    <i class="fas fa-minus"></i>
-                                                </button>
+                <div class="col-md-3 col-lg-3 col-xl-3">
+                    <h6 class="mb-0">${cartArray[i].title}</h6>
+                </div>
 
-                                                <input id="form1" min="0" name="quantity" value="${cartArray[i].quantity}" type="number"
-                                                    class="form-control form-control-sm" />
+                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                    <input min="0" value="${cartArray[i].quantity}" class="form-control form-control-sm mx-2 text-center" style="width: 60px;" readonly />
+                </div>
 
-                                                <button data-mdb-button-init data-mdb-ripple-init
-                                                    class="btn btn-link px-2"
-                                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                                    <i class="fas fa-plus"></i>
-                                                </button>
-                                            </div>
-                                            <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                                <h6 class="mb-0">Rs.${cartArray[i].price}.00</h6>
-                                            </div>
-                                            <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
-                                            </div>
-                                        </div>
-`
-    
+                <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                    <h6 class="mb-0">Rs.${cartArray[i].price}.00</h6>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 text-end">
+                    <a href="javascript:void(0);" onclick="deleteItem(${i})">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                            <path d="M 14.984375 2.4863281 A 1.0001 1.0001 0 0 0 14 3.5 L 14 4 L 8.5 4 A 1.0001 1.0001 0 0 0 7.4863281 5 L 6 5 A 1.0001 1.0001 0 1 0 6 7 L 24 7 A 1.0001 1.0001 0 1 0 24 5 L 22.513672 5 A 1.0001 1.0001 0 0 0 21.5 4 L 16 4 L 16 3.5 A 1.0001 1.0001 0 0 0 14.984375 2.4863281 z M 6 9 L 7.7929688 24.234375 C 7.9109687 25.241375 8.7633438 26 9.7773438 26 L 20.222656 26 C 21.236656 26 22.088031 25.241375 22.207031 24.234375 L 24 9 L 6 9 z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        `;
+
+        itemPrice += cartArray[i].price * cartArray[i].quantity;
+        item += cartArray[i].quantity;
+    }
+
+    let discountPrice = itemPrice * 0.1;
+    let totalPrice = itemPrice - discountPrice;
+
+    document.getElementById("itemQty").innerText = item + " items";
+    document.getElementById("summryQty").innerText = item + " items";
+    document.getElementById("itemPrice").innerText = "Rs." + itemPrice + ".00";
+    document.getElementById("discountPrice").innerText = "Rs." + discountPrice + ".00";
+    document.getElementById("totalPrice").innerText = "Rs." + totalPrice + ".00";
 }
+
+loadcart();
+
+
+function deleteItem(index) {
+    cartArray.splice(index, 1); 
+    localStorage.setItem("arrakCart", JSON.stringify(cartArray)); 
+    loadcart();
+}
+
 

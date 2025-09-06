@@ -68,6 +68,7 @@ let arrackArray = [
 for (let i = 0; i < arrackArray.length; i++) {
     document.getElementById("mainAdd").innerHTML += `
         <div class="col" data-aos="zoom-out-up">
+    
             <div class="card h-100">
                 <img src="${arrackArray[i].img}" class="card-img-top" alt="">
                 <div class="card-body">
