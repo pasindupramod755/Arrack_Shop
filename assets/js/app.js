@@ -74,9 +74,14 @@ for (let i = 0; i < arrackArray.length; i++) {
                     <h5 class="card-title">${arrackArray[i].title}</h5>
                     <p class="card-text">${arrackArray[i].description}</p>
                     <p class="card-text"><strong>Price:</strong> Rs. ${arrackArray[i].price}</p>
-                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-primary" id="${arrackArray[i].title}" onclick="buyNowBtn(this.id)">Buy Now</button>
                 </div>
             </div>
         </div>
     `;
+}
+
+
+function buyNowBtn(id){
+    console.log(id)
 }
