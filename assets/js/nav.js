@@ -22,7 +22,7 @@ document.getElementById("navBarLoad").innerHTML = `
                         <a class="nav-link" href="#about">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-outline-light ms-2" href="cart.html">Cart</a>
