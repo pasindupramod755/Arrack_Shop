@@ -7,7 +7,7 @@ function loadcart() {
     item = 0;
 
     const cartLoad = document.getElementById("cartLoad");
-    cartLoad.innerHTML = ""; // Clear existing cart
+    cartLoad.innerHTML = "";
 
     for (let i = 0; i < cartArray.length; i++) {
         cartLoad.innerHTML += `
@@ -58,9 +58,18 @@ loadcart();
 
 
 function deleteItem(index) {
-    cartArray.splice(index, 1); 
-    localStorage.setItem("arrakCart", JSON.stringify(cartArray)); 
+    cartArray.splice(index, 1);
+    localStorage.setItem("arrakCart", JSON.stringify(cartArray));
     loadcart();
 }
+
+
+function clearCart() {
+    cartArray = [];
+    localStorage.removeItem("arrakCart");
+    loadcart();
+    alert(" successfully 🛒");
+}
+
 
 

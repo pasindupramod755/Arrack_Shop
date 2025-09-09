@@ -84,8 +84,8 @@ for (let i = 0; i < arrackArray.length; i++) {
 
 
 function buyNowBtn(id) {
+    alert(`You Buy Now for: ${id} 🛒`);
     let index = getIndex(id);
-
     let buyArrak = {
         title: arrackArray[index].title,
         img: arrackArray[index].img,
