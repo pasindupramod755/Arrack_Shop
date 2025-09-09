@@ -9,10 +9,68 @@
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
 </head>
 
 <body>
     <div id="navBarLoad"></div>
+
+    <section class="py-5 bg-light m-5" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 rounded-3">
+                        <div class="card-body p-5">
+                            <h2 class="text-center mb-4 fw-bold">📞 Contact Us</h2>
+                            <p class="text-center text-muted mb-4">
+                                Have questions about our Arrack flavors or want to place an order?
+                                Fill out the form below and we’ll get back to you!
+                            </p>
+
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                        required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="example@email.com"
+                                        required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="+94 77 123 4567">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="message" rows="4"
+                                        placeholder="Type your message here..." required></textarea>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-dark btn-lg">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <p class="mb-1"><i class="bi bi-geo-alt-fill text-danger"></i> Colombo, Sri Lanka</p>
+                        <p class="mb-1"><i class="bi bi-telephone-fill text-success"></i> +94 77 123 4567</p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill text-primary"></i> arrackshop@email.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <script src="assets/js/nav.js"></script>
